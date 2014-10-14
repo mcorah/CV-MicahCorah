@@ -1,6 +1,17 @@
 % LaTeX file for resume 
 % This file uses the resume document class (res.cls)
 
+\newcommand{\experience}[4]{
+	\begin{tabular}{p{4in} r}
+    {\bf #1} #2 & #3
+  \end{tabular}
+  \begin{itemize}
+      #4
+  \end{itemize}
+	\vspace{-4mm}
+}
+
+
 %\documentclass[margin,letterpaper]{res}
 \documentclass[margin]{res}
 %\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
@@ -14,102 +25,94 @@
 \begin{document}  
 \name{Micah D. Corah}
 
-\address{\bf Current\\ 42 Colvin Circle  \\   Troy, NY 12180  \\ {\bf phone: }(720) 270-3901 \\ {\bf email: }micahcorah@gmail.com}
-\address{\bf Permanent\\ 3361 E. Maplewood Ave. \\   Centennial, CO 80121}
+\address{\bf Permanent\\ 3361 E. Maplewood Ave. \\   Centennial, CO 80121\\ {\bf phone: }(720) 270-3901 \\ {\bf email: }micahcorah@gmail.com}
+\address{\bf Current\\ 302 Williams \\ 1999 Burdett Ave. \\   Troy, NY 12180  }
 
 \begin{resume}                        
 \vspace{-1.5mm}
 \section{SUMMARY OF SKILLS:}
 \vspace{10mm}
   \begin{itemize}
-    \item Robotics simulation, programming, and design
-    \item Parallel and high performance computing for scientific computing
-    \item Experienced with CAD (NX and Solidworks) with a focus on surfacing techniques
+    \item Robotics simulation, programming, and design, ROS
+    \item High performance and scientific computing
+    \item CAD (NX and Solidworks), especially surfacing techniques
     \item Prototyping: 3d printing, CNC milling, vacuum forming
-    \item Languages used: C, C++, Python, Matlab, Bash, \LaTeX, Task Description Language
+    \item Languages: C, C++, Python, Matlab, Bash, \LaTeX
 	\end{itemize}
 \vspace{-3.5mm}
 \section{EDUCATION:}
 	Rensselaer Polytechnic Institute, Troy, NY \\
 	Bachelor's: Computer Science and Mechanical Engineering, May 2015 \\
-	G.P.A. 3.97/4.00, Dean's List
-\vspace{-2.5mm}
-\normalsize{\section{Summary of Relevant Coursework:}}
+	G.P.A. 3.95/4.00, Dean's List
+\vspace{-4.5mm}
+\normalsize{\section{Selected Courses:}}
    \begin{ncolumn}{2}
 		{\bf Computer Science}		  	      		&  {\bf Engineering} \\
-	\vspace{-1.5mm}
-      Intro. to Discrete Structures &	 Strengths of Materials \\
-			Intro. to Algorithms				  &  Intro. to Engineering Design \\  
-			Models of Computation				  &  Embedded Control \\
-      Computer Organization          &  Elements of Mechanical Design \\
-			Parallel Programming				  &  Electronic Instrumentation \\
+	\vspace{-2.5mm}
+      Programming Languages &	 Embedded Control \\
+			Affective Computing				  &  Elements of Mechanical Design \\
+      Computer Organization          & Modeling and Control \\
+			Parallel Programming				  &  Mechatronics \\
 			Operating Systems						  &  Robotics 1 \\
       
 	\end{ncolumn}
 \vspace{-5mm}
  \section{EXPERIENCE:}      
-	\begin{tabular}{p{4in} r}
-    {\bf Independent Study: Robotic Catching}, Jeff Trinkle, RPI & August 2013 -- Present
-  \end{tabular}
-  \begin{itemize}
+  \experience{Internship:}{Quadrotors, Nathan Michael, CMU}
+    {May 2014 -- August 2014}
+  {
+    \item Implemented minimum snap, collision free, multi-vehicle trajectory
+      generation
+    \item Developed controller for discretized trajectories
+    \item Developed system for persistent flight, recharging, and coverage of waypoints
+    \item Matlab, C++, Python, ROS
+  }
+  \experience{Independent Study:}{Robotic Catching, Jeff Trinkle, RPI}{ August
+  2013 -- December 2013}
+  {
     \item Developing a simulation and controller for contact-centric catching of a sliding object
     \item Matlab, C++
-  \end{itemize}
-	\vspace{-1.5mm}
-	\begin{tabular}{p{4in} r}
-    {\bf Internship: Multi-Robot Assembly}, Reid Simmons, CMU & May 2013 -- August 2013
-  \end{tabular}
-  \begin{itemize}
+  }
+  \experience{Internship: }{Multi-Robot Assembly, Reid Simmons, CMU}{May 2013 -- August 2013}
+  {
     \item Developed a simulation of multi-robot assembly of an airplane wing-ladder
     \item Implemented a controller for latching a robot onto the wing 
     \item C++, Task Description Language
-  \end{itemize}
-	\vspace{-1.5mm}
-	\begin{tabular}{p{4in} r}
-		{\bf Research: High Performance Computing}, SCOREC, RPI	& September 2012 -- May 2013\\
-	\end{tabular}
-	\begin{itemize}
+  }
+  \experience{Research: }{High Performance Computing, SCOREC, RPI}{September 2012 -- December 2013}
+  {
 		\item Implemented threaded mesh I/O for the Parallel Unstructured Mesh Interface
     \item Transitioned software from partition-model-per-part to partition-model-per-process
 		\item Debugged and tested FMDB/PUMI on the BlueGene/Q and Intel Phi
     \item C++
-	\end{itemize}
-	\vspace{-1.5mm}
-	\begin{tabular}{p{4in} r}
-	  {\bf Undergraduate TA}, Computer Science 1, RPI 			& August 2012 -- May 2013\\
-	\end{tabular}
-	\begin{itemize}
+  }
+  \experience{Undergraduate TA:}{Computer Science 1, RPI}{August 2012 -- May 2013}
+  {
 		\item Assisted students with lab-work and graded results
- 	\end{itemize}
-	\vspace{-1.5mm}
-	\begin{tabular}{p{4in} r}
-		{\bf Research}, Cognitive Robotics Lab, RPI		& September 2012 -- December 2012
-	\end{tabular}
-	\begin{itemize}
+  }
+  \experience{Research:}{Cognitive Robotics Lab, RPI}{September 2012 -- December 2012}
+  {
 		\item Development of server for Robot Operating System based actor
 			controlled by Unity tablet application.
-	\end{itemize}
-\vspace{-1.5mm}
-
+  }
 \normalsize{\section{Assorted Projects}}
+\vspace{7mm}
 \begin{itemize}
+  \item BeepHive, a parallel robotic swarm simulator (MPI, Qt)
   \item Developed sleep-monitor which turns off electronics when user falls asleep (Intro. to Engr. Design)
   \item Designed and produced a longboard press and several longboards using NX CAD, including a longboard
         with interior LEDs
   \item Designed and produced various themed CO2 cars including a racing pickup, Tron Light-Cycle,
         and autonomous golf cart, utilizing Solidworks, 3d printing, and CNC milling
 \end{itemize}
-\vspace{-1.5mm}
 
 \section{ACTIVITIES:}
 	\begin{itemize}
-    \item RPI Sample Return Challenge Team
+    \item RPI Sample Return Robot Challenge Team
     \begin{itemize}
       \item Competition involves autonomously finding and retrieving objects in an outdoor environment
-      \item Involved in mechanical design, part selection, and eventually programming in preparation for the summer 2014 competition
+      \item Lead mechanical and electrical design for the Summer 2014 competition
     \end{itemize}
 	\end{itemize}
 \end{resume} 
 \end{document}
-
-

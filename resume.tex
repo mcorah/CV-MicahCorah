@@ -1,5 +1,14 @@
 % LaTeX file for resume 
 % This file uses the resume document class (res.cls)
+%\documentclass[margin,letterpaper]{res}
+\documentclass[margin]{res}
+\usepackage{hyperref}
+
+\topmargin=-.5in  % start text higher on the page
+\footskip=-0.5in
+\hoffset=0.5in
+\textwidth=6.5in
+\setlength{\textheight}{10.2in} % increase text height to fit resume on 1 page
 
 \newcommand{\experience}[4]{
 	\begin{tabular}{p{4in} r}
@@ -8,20 +17,8 @@
   \begin{itemize}
       #4
   \end{itemize}
-	\vspace{-4mm}
 }
 
-
-%\documentclass[margin,letterpaper]{res}
-\documentclass[margin]{res}
-%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-\usepackage{hyperref}
-%{-1.5mm}\usepackage{newcent}   % uses new century schoolbook postscript font  
-\topmargin=-.5in  % start text higher on the page
-\footskip=-0.5in
-\hoffset=0.5in
-\textwidth=6.5in
-\setlength{\textheight}{10.2in} % increase text height to fit resume on 1 page
 \begin{document}  
 \name{Micah David Corah}
 
@@ -92,16 +89,13 @@
 					inventory and display, delivered orders, and assisted in opening and closing
   }
 \normalsize{\section{Presentations \& Publications}}
-\begin{itemize}
-  \item \emph{Multi-Robot Long-Term Peristent Coverage with Fuel Constrained
-    Robots}, second author (submitted)
-  \item \emph{Persistent Deployment of Micro-Aerial Vehicles}, RISS poster
-    session 2014, \url{http://bit.ly/1rmgXP2})
-  \item \emph{Software Development for Cooperative Multi-Robot Assembly of an
-    Airplane Wing Ladder}, RISS poster session 2013, \url{http://bit.ly/1nw7Jl0}
-  \item \emph{Software for Cooperative Assembly of an Airplane Wing Ladder Using
-    Mobile Robots}, RISS working papers journal 2013, \url{http://bit.ly/1C3Pmbz}
-\end{itemize}
+\nocite{persistentpaper}
+\nocite{persistentposter}
+\nocite{boeingposter}
+\nocite{boeingpaper}
+\renewcommand\refname{}
+\bibliographystyle{IEEEtran}
+\bibliography{bibliography}
 
 \normalsize{\section{Assorted Projects}}
 \begin{itemize}

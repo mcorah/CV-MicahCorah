@@ -26,43 +26,47 @@
 \address{\bf Current\\ Williams 302c \\ 1999 Burdett Ave. \\   Troy, NY 12180  }
 
 \begin{resume}                        
-\vspace{-1.5mm}
 \section{SUMMARY OF SKILLS:}
-\vspace{10mm}
   \begin{itemize}
-    \item Robotics simulation, programming, and design including ROS
-    \item Control and trajectory generation for quadrotors
-    \item High performance and scientific computing
-    \item CAD (NX and Solidworks), especially surfacing techniques
+    \item Simulation of multi-robot systems
+    \item Software development for robotics especially ROS
+    \item Control and trajectory generation, especially regarding quadrotors
+    \item Parallel high performance and scientific computing (MPI)
+    \item Engineering design especially using CAD (Solidworks and NX)
     \item Prototyping: 3d printing, CNC milling, vacuum forming
-    \item Languages: C, C++, Python, Matlab, Bash, \LaTeX
+    \item Languages: C, C++, Julia, \LaTeX, Matlab, Python
 	\end{itemize}
-\vspace{-3.5mm}
 \section{EDUCATION:}
 	Rensselaer Polytechnic Institute, Troy, NY \\
 	Bachelor's: Computer Science and Mechanical Engineering, May 2015 \\
 	G.P.A. 3.95/4.00, Dean's List
-\vspace{-4.5mm}
  \section{EXPERIENCE:}      
-  \experience{Internship:}{Quadrotors, Nathan Michael, CMU}
+  \experience{Research Internship:}{Quadrotors, Nathan Michael, CMU}
     {May 2014 -- August 2014}
   {
+    \item NSF Research Experience for Undergraduates (REU)
     \item Implemented minimum snap, collision free, multi-vehicle trajectory
       generation
-    \item Developed controller for discretized trajectories
+    \item Developed controller for tracking of discretized trajectories
     \item Developed system for persistent flight, recharging, and coverage of waypoints
-    \item Matlab, C++, Python, ROS
+    \item Videos:
+      \begin{itemize}
+        \item Interview: \url{https://www.youtube.com/watch?v=qqpLp2Ayqcw}
+        \item Demo flight: \url{https://www.youtube.com/watch?v=8GPXf5lc8iY}
+      \end{itemize}
+    \item C++, Matlab, Python, ROS
   }
   \experience{Independent Study:}{Robotic Catching, Jeff Trinkle, RPI}{ August
   2013 -- December 2013}
   {
-    \item Developing a simulation and controller for contact-centric catching of a sliding object
+    \item Initial modeling and simulation of contact-oriented catching of a sliding object
     \item Matlab, C++
   }
-  \experience{Internship: }{Multi-Robot Assembly, Reid Simmons, CMU}{May 2013 -- August 2013}
+  \experience{Research Internship:}{Wing Assembly, Reid Simmons, CMU}{May 2013 -- August 2013}
   {
     \item Developed a simulation of multi-robot assembly of an airplane wing-ladder
-    \item Implemented a controller for latching a robot onto the wing 
+    \item Implemented an autonomous behavior for a mobile robot to attach and
+      align to an airplane wing spar
     \item C++, Task Description Language
   }
   \experience{Research: }{High Performance Computing, SCOREC, RPI}{September 2012 -- December 2013}
@@ -83,11 +87,13 @@
 			controlled by Unity tablet application.
     \item Python
   }
+\pagebreak[2]
   \experience{Work Study:}{Campus Computer Store, RPI}{September 2011 -- May 2012}
   {
    	\item Performed sales, managed stock, ensured placement of orders, organized items for
 					inventory and display, delivered orders, and assisted in opening and closing
   }
+\pagebreak[1]
 \normalsize{\section{Presentations \& Publications}}
 \nocite{persistentpaper}
 \nocite{persistentposter}
@@ -97,7 +103,7 @@
 \bibliographystyle{IEEEtran}
 \bibliography{bibliography}
 
-\normalsize{\section{Assorted Projects}}
+\normalsize{\section{Hardware Projects}}
 \begin{itemize}
   \item Developed a heart-rate monitor which turns off electronics when user
     falls asleep (Introduction to Engineering Design)
@@ -106,6 +112,14 @@
   \item Designed and produced various themed CO2 cars including a racing pickup, Tron Light-Cycle,
         and autonomous golf cart, utilizing Solidworks, 3d printing, and CNC milling
 \end{itemize}
+\normalsize{\section{Software Projects}}
+\begin{itemize}
+  \item MultiQuadLift: linearized simulation of large swarms of quadrotors with
+    relative measurements and payload carrying in Julia,
+    \url{https://github.com/mcorah/MultiQuadLift}
+  \item BeepHive: parallel robotic swarm simulator in C++ with MPI (WIP),
+    \url{https://github.com/BeepBoopBop/BeepHive}
+\end{itemize}
 \section{ACTIVITIES:}
 	\begin{itemize}
     \item RPI Sample Return Robot Challenge Team
@@ -113,9 +127,6 @@
       \item Competition involves autonomously finding and retrieving objects in an outdoor environment
       \item Lead mechanical and electrical design for the Summer 2014 competition
     \end{itemize}
-	\end{itemize}
-\section{MEMBERSHIP:}
-	\begin{itemize}
     \item Upsilon Pi Epsilon (computer science honor society)
 	\end{itemize}
 \end{resume} 

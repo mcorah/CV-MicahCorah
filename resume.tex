@@ -1,8 +1,9 @@
-% LaTeX file for resume 
+% LaTeX file for resume
 % This file uses the resume document class (res.cls)
 %\documentclass[margin,letterpaper]{res}
 \documentclass[margin]{res}
 \usepackage{hyperref}
+\usepackage{enumitem}
 
 \topmargin=-.5in  % start text higher on the page
 \footskip=-0.5in
@@ -19,29 +20,23 @@
   \end{itemize}
 }
 
-\begin{document}  
+\begin{document}
 \name{Micah David Corah}
 
 \address{\bf Permanent\\ 3361 E. Maplewood Ave. \\   Centennial, CO 80121\\ {\bf phone: }(720) 270-3901 \\ {\bf email: }micahcorah@gmail.com}
-\address{\bf Current\\ Williams 302c \\ 1999 Burdett Ave. \\   Troy, NY 12180  }
+\address{\bf Current\\ 510 N. Negley Ave. \\ Apt. 2 \\   Pittsburgh, PA 15206  }
 
-\begin{resume}                        
-\section{SUMMARY OF SKILLS:}
-  \begin{itemize}
-    \item Simulation of multi-robot systems
-    \item Software development for robotics especially ROS
-    \item Control and trajectory generation, especially regarding quadrotors
-    \item Parallel high performance and scientific computing (MPI)
-    \item Engineering design especially using CAD (Solidworks and NX)
-    \item Prototyping: 3d printing, CNC milling, vacuum forming
-    \item Languages: C, C++, Julia, \LaTeX, Matlab, Python
-	\end{itemize}
-\section{EDUCATION:}
-	Rensselaer Polytechnic Institute, Troy, NY \\
-	Bachelor's: Computer Science and Mechanical Engineering, May 2015 \\
-	G.P.A. 3.95/4.00, Dean's List
- \section{EXPERIENCE:}      
-  \experience{Research Internship:}{Quadrotors, Nathan Michael, CMU}
+\begin{resume}
+  \section{EDUCATION:}
+  \begin{tabular}{ll}
+    Carnegie Mellon University, Pittsburgh, PA & Rensselaer Polytechnic Institute, Troy, NY \\
+    Doctorate: Robotics, Ongoing & Bachelor's: Computer Science \\
+                                 &Bachelor's: Mechanical Engineering, May 2015 \\
+                                 &G.P.A. 3.92/4.00
+  \end{tabular}
+
+ \section{EXPERIENCE:}
+  \experience{Research Internship:}{Aerial Vehicles, Nathan Michael, CMU}
     {May 2014 -- August 2014}
   {
     \item NSF Research Experience for Undergraduates (REU)
@@ -49,61 +44,37 @@
       generation
     \item Developed controller for tracking of discretized trajectories
     \item Developed system for persistent flight, recharging, and coverage of waypoints
-    \item Videos:
-      \begin{itemize}
-        \item Interview: \url{https://www.youtube.com/watch?v=qqpLp2Ayqcw}
-        \item Demo flight: \url{https://www.youtube.com/watch?v=8GPXf5lc8iY}
-      \end{itemize}
-    \item C++, Matlab, Python, ROS
+    \item Interview: \url{https://www.youtube.com/watch?v=qqpLp2Ayqcw}
   }
   \experience{Independent Study:}{Robotic Catching, Jeff Trinkle, RPI}{ August
   2013 -- December 2013}
   {
     \item Initial modeling and simulation of contact-oriented catching of a sliding object
-    \item Matlab, C++
   }
   \experience{Research Internship:}{Wing Assembly, Reid Simmons, CMU}{May 2013 -- August 2013}
   {
     \item Developed a simulation of multi-robot assembly of an airplane wing-ladder
     \item Implemented an autonomous behavior for a mobile robot to attach and
       align to an airplane wing spar
-    \item C++, Task Description Language
   }
-  \experience{Research: }{High Performance Computing, SCOREC, RPI}{September 2012 -- December 2013}
+  \experience{Undergraduate Research:}{Parallel Computing, SCOREC, RPI}{September 2012 -- December 2013}
   {
 		\item Implemented threaded mesh I/O for the Parallel Unstructured Mesh Interface
     \item Transitioned software from partition-model-per-part to partition-model-per-process
-		\item Debugged and tested FMDB/PUMI on the BlueGene/Q and Intel Phi
-    \item C++, MPI
   }
-  \experience{Undergraduate TA: }{Computer Science 1, RPI}{August 2012 -- May 2013}
+  \experience{Undergraduate TA:}{Computer Science 1, RPI}{August 2012 -- May 2013}
   {
 		\item Assisted students with lab-work and graded results
-    \item Python
   }
-  \experience{Research: }{Cognitive Robotics Lab, RPI}{September 2012 -- December 2012}
-  {
-		\item Development of server for Robot Operating System based actor
-			controlled by Unity tablet application.
-    \item Python
-  }
-\pagebreak[2]
-  \experience{Work Study:}{Campus Computer Store, RPI}{September 2011 -- May 2012}
-  {
-   	\item Performed sales, managed stock, ensured placement of orders, organized items for
-					inventory and display, delivered orders, and assisted in opening and closing
-  }
-\normalsize{\section{Presentations \& Publications}}
-\nocite{persistentpaper}
-\nocite{persistentposter}
-\nocite{boeingposter}
-\nocite{boeingpaper}
-\renewcommand\refname{}
-\bibliographystyle{IEEEtran}
-{
-\renewcommand{\section}[2]{}
-\bibliography{bibliography}
-}
+\section{SKILLS AND INTERESTS:}
+  \begin{itemize}
+    \item Active perception
+    \item Multi-robot exploration
+    \item Multi-robot systems
+    \item Control and trajectory generation
+    \item Parallel, high performance, and scientific computing (MPI)
+    \item Languages: C, C++, Julia, \LaTeX, Matlab, Python
+	\end{itemize}
 
 \normalsize{\section{Hardware Projects}}
 \begin{itemize}
@@ -122,14 +93,18 @@
   \item BeepHive: parallel robotic swarm simulator in C++ with MPI (WIP),\\
     \url{https://github.com/BeepBoopBop/BeepHive}
 \end{itemize}
-\section{ACTIVITIES:}
-	\begin{itemize}
-    \item RPI Sample Return Robot Challenge Team
-    \begin{itemize}
-      \item Competition involves autonomously finding and retrieving objects in an outdoor environment
-      \item Lead mechanical and electrical design for the Summer 2014 competition
-    \end{itemize}
-    \item Upsilon Pi Epsilon (computer science honor society)
-	\end{itemize}
-\end{resume} 
+\normalsize{\section{Presentations \& Publications}}
+\nocite{persistentpaper}
+\nocite{persistentposter}
+\nocite{boeingposter}
+\nocite{boeingpaper}
+%\renewcommand\refname{}
+\bibliographystyle{IEEEtran}
+{
+  \let\oldbibitem\bibitem
+  \renewcommand{\bibitem}[1]{\itemindent5mm\oldbibitem {#1}}
+  \renewcommand{\section}[2]{}
+  \bibliography{bibliography}
+}
+\end{resume}
 \end{document}

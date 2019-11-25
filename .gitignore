@@ -9,3 +9,6 @@
 *.log
 *.synctex.gz
 *.out
+
+ellen_examples/*
+res.cls.bac

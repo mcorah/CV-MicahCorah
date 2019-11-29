@@ -198,7 +198,7 @@ FUNCTION {bbl.edition}{ "ed." }
 FUNCTION {bbl.volume}{ "vol." }
 FUNCTION {bbl.of}{ "of" }
 FUNCTION {bbl.number}{ "no." }
-FUNCTION {bbl.in}{ "in" }
+FUNCTION {bbl.in}{ "" }
 FUNCTION {bbl.pages}{ "pp." }
 FUNCTION {bbl.page}{ "p." }
 FUNCTION {bbl.chapter}{ "ch." }

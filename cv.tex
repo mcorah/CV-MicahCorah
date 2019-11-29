@@ -23,6 +23,15 @@
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
+\usepackage{lastpage}
+\usepackage[space]{cite}
+%\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+\usepackage{bibunits}
+\defaultbibliographystyle{IEEEtran}
+\defaultbibliography{bibliography}
+
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
 % Specify the location of the included fonts
 \fontdir[fonts/]
 
@@ -81,5 +90,6 @@
   {Micah D. Corah~~~·~~~Curriculum Vitae}
   {\thepage}
 
+\input{publications.tex}
 
 \end{document}

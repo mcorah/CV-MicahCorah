@@ -23,13 +23,14 @@
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
+\usepackage{natbib}
 \usepackage{lastpage}
 \usepackage[space]{cite}
-%\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 \usepackage{bibunits}
 \defaultbibliographystyle{IEEEtran_cv}
 \defaultbibliography{bibliography}
 
+\usepackage{etoolbox}
 \patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 
 % Specify the location of the included fonts
@@ -48,9 +49,6 @@
 % \definecolor{text}{HTML}{333333}
 % \definecolor{graytext}{HTML}{5D5D5D}
 % \definecolor{lighttext}{HTML}{999999}
-
-% Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{true}
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}

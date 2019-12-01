@@ -599,9 +599,32 @@
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
     \ifempty{#2#3}
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\%
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+    \ifempty{#5}{}{\multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} \\}
+  \end{tabular*}%
+}
+% Duplicate of cventry that allows for a second entry
+\newcommand*{\cventrydouble}[8]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \ifempty{#1#2}
+    {%
+      \entrypositionstyle{#3} & \entrydatestyle{#4} \\%
+      \ifempty{#5}{}{\multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} \\}%
+      \entrypositionstyle{#6} & \entrydatestyle{#7} \\%
+      \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#8}}%
+      \ifempty{#8}{}{\multicolumn{2}{L{\textwidth}}{\descriptionstyle{#8}} \\}%
+    }
+    {%
+      \entrytitlestyle{#1} & \entrylocationstyle{#2} \\%
+      \entrypositionstyle{#3} & \entrydatestyle{#4} \\%
+      \ifempty{#5}{}{\multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} \\}%
+      \entrypositionstyle{#6} & \entrydatestyle{#7} \\%
+      \ifempty{#8}{}{\multicolumn{2}{L{\textwidth}}{\descriptionstyle{#8}} \\}%
+    }
   \end{tabular*}%
 }
 

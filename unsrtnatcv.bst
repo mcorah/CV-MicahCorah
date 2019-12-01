@@ -223,7 +223,7 @@ FUNCTION {bold}
 FUNCTION {awesome}
 { duplicate$ empty$
     { pop$ "" }
-    { "\textcolor{awesome}{" swap$ * "}" * }
+    { "\textcolor{awesome}{\textbf{" swap$ * "}}" * }
   if$
 }
 

@@ -229,13 +229,22 @@ FUNCTION {awesome}
 
 INTEGERS { nameptr namesleft numnames }
 
+% Replace Micah's name with bold
+FUNCTION {format.micah}
+{ duplicate$
+  "Micah Corah" =
+  { awesome }
+  'skip$
+  if$
+}
+
 FUNCTION {format.names}
 { 's :=
   #1 'nameptr :=
   s num.names$ 'numnames :=
   numnames 'namesleft :=
     { namesleft #0 > }
-    { s nameptr "{ff~}{vv~}{ll}{, jj}" format.name$ 't :=
+    { s nameptr "{ff~}{vv~}{ll}{, jj}" format.name$ format.micah 't :=
       nameptr #1 >
         { namesleft #1 >
             { ", " * t * }

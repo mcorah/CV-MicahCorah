@@ -211,6 +211,22 @@ FUNCTION {emphasize}
   if$
 }
 
+% Custom method to bold text
+FUNCTION {bold}
+{ duplicate$ empty$
+    { pop$ "" }
+    { "\textbf{" swap$ * "}" * }
+  if$
+}
+
+% Custom use the awesome.sty default color
+FUNCTION {awesome}
+{ duplicate$ empty$
+    { pop$ "" }
+    { "\textcolor{awesome}{" swap$ * "}" * }
+  if$
+}
+
 INTEGERS { nameptr namesleft numnames }
 
 FUNCTION {format.names}

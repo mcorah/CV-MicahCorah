@@ -442,7 +442,8 @@ FUNCTION {format.date}
       " " * swap$ *
     }
   if$
-  extra.label *
+  %removing disambiguating characters from label
+  %extra.label *
 }
 
 FUNCTION {format.btitle}

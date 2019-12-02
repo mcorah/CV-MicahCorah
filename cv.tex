@@ -30,6 +30,9 @@
 \defaultbibliographystyle{unsrtnatcv}
 \defaultbibliography{bibliography}
 
+% date formatting
+\usepackage[en-US]{datetime2}
+
 \renewcommand{\bibsection}{}
 
 % Specify the location of the included fonts
@@ -39,15 +42,8 @@
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
 \colorlet{awesome}{awesome-red}
-% Uncomment if you would like to specify your own color
-% \definecolor{awesome}{HTML}{CA63A8}
 
-% Colors for text
-% Uncomment if you would like to specify your own color
-% \definecolor{darktext}{HTML}{414141}
-% \definecolor{text}{HTML}{333333}
-% \definecolor{graytext}{HTML}{5D5D5D}
-% \definecolor{lighttext}{HTML}{999999}
+\DTMlangsetup{showdayofmonth=false}
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
@@ -85,7 +81,7 @@
 \makecvfooter
   {\today}
   {Micah Corah~~~·~~~Curriculum Vitae}
-  {\thepage}
+  {\thepage \ of \pageref{LastPage}}
 
 \input{education.tex}
 \input{skills.tex}

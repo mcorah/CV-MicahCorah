@@ -603,7 +603,7 @@
   \end{tabular*}%
 }
 % Duplicate of cventry that allows for a second entry
-\newcommand*{\cventrydouble}[8]{%
+\newcommand*{\cventrytwo}[8]{%
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}

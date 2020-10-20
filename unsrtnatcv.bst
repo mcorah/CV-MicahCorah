@@ -972,7 +972,7 @@ FUNCTION {phdthesis}
   format.authors "author" output.check
   author format.key output
   new.block
-  format.btitle "title" output.check
+  format.title "title" output.check
   new.block
   "PhD thesis" format.thesis.type output.nonnull
   school "school" output.check

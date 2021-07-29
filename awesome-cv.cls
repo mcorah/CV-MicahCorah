@@ -592,7 +592,8 @@
 }
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<location>}{<title>}{<date>}{<description>}
-\newcommand*{\cventry}[5]{%
+\newcommand*{\cventry}[5]{
+
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
@@ -603,7 +604,8 @@
   \end{tabular*}%
 }
 % Duplicate of cventry that allows for a second entry
-\newcommand*{\cventrytwo}[8]{%
+\newcommand*{\cventrytwo}[8]{
+
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}

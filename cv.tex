@@ -30,6 +30,9 @@
 \defaultbibliographystyle{unsrtnatcv}
 \defaultbibliography{bibliography}
 
+\newif\ifwebversion
+\webversionfalse
+
 % date formatting
 \usepackage[en-US]{datetime2}
 
@@ -63,9 +66,12 @@
   {\enskip\cdotp\enskip}%
   Aerial Robotics%
 }
-%\address{8 Esther St., Apt. 7, Pasadena, CA 91103}
 
+\ifwebversion\else
+\address{8 Esther St., Apt. 7, Pasadena, CA 91103}
 \mobile{720-270-3901}
+\fi
+
 \email{micahcorah@gmail.com}
 \googlescholar{NHt9KX4AAAAJ}{}
 
